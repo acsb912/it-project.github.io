@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Buy</title>
+  <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="default-theme.css" id="theme-style">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		 <style>
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 78px;
+  color: var(--color);
+}
+#order {
+  width: 578px;
+  margin: 24px auto;
+}
+#order input:hover,
+#order select:hover {
+  border-color: var(--color);
+}
+#order input,
+#order select {
+  padding: 10px;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+#order button:hover {
+  background-color: var(--color);
+}
+#Message {
+    text-align: center;
+  margin-top: 14px;
+color: var(--color);
+}
+.container-buy {
+			flex-grow: 1;
+}
+	 
+	 </style>
+      </head>
+     <body>
+	    <nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html" >Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Book.html">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html">Compare</a></li>
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us</a></li>
+				<li class="navl"><a href="contact-us.html">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html" class="active"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+ <main class="container-buy">
+ <section class="buy-text">
+  <h1>Buy a Car</h1>
+  </section>
+<section>
+<form id="order">
+  <input type="text" id="name" placeholder="name">
+
+  <select id="car">
+    <option>Merseds</option>
+    <option>BMW</option>
+    <option>GMC</option>
+    <option>Ferrari</option>
+    <option>Porsche</option>
+	<option>Lamborgini</option>
+	<option>Toyota</option>
+	<option>Nissan</option>
+	<option>chevrolet</option>
+  </select>
+
+  <select id="color">
+    <option>white</option>
+    <option>black</option>
+    <option>red</option>
+  </select>
+
+  <select id="payment">
+    <option>cash</option>
+    <option>installment</option>
+  </select>
+
+  <button type="submit">submit your order</button>
+  <p id="Message"></p>
+</form>
+</section>
+</main>
+<footer>
+  <p>Author: IT TEAM<br>
+  <a href="mailto:IT@example.com">IT@example.com</a></p>
+</footer>
+<script src="themeChange.js"></script>
+<script>
+  let form = document.getElementById("order");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let name = document.getElementById("name").value;
+	if(name == ""){
+		document.getElementById("Message").innerText = "Name can not be empty";
+		return ;
+	}
+	for(let i=0;i<name.length;i++){
+	let char = name[i];
+	if(!(char>='a'&& char<='z')&&!(char>='A'&& char<='Z')&&(char!=' ')){
+		document.getElementById("Message").innerText = "Name must consist of letters only";
+		return;
+	}
+	 }
+    let car = document.getElementById("car").value;
+    let message = document.getElementById("Message");
+    message.innerText = "Thank you " + name + ", your " + car + " order has been sent!";
+	sessionStorage.setItem("lastOrderName", name);
+	sessionStorage.setItem("lastOrderCar", car);
+  });
+</script>
+     </body>
+</html>

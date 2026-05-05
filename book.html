@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Test Drive Car</title>
+  <link rel="stylesheet" href="kerolos2.css">
+  <link id="theme-style" href="default-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html" >Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Car-Showroom/Browse.html">Car Showroom/Browse</a></li>
+				<li class="navl"><a href="Book.html" class="active">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html">Compare</a></li>
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us</a></li>
+				<li class="navl"><a href="contact-us.html">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+ <main class="book-container">
+<h1>Book a Test Drive Car</h1>
+<form id="testDriveForm" novalidate>
+  <input type="text" placeholder="name" id="name">
+  <input type="email" placeholder="e-mail" id="email" >
+  <input type="tel" placeholder="Phone number" id="phone">
+<input type="text" placeholder="city" id="city">
+
+  <select id="car">
+    <option>BMW</option>
+    <option>Audi</option>
+    <option>Mercedes</option>
+  </select>
+
+  <input type="date" placeholder="date" id="date">
+  <input type="time" placeholder="time" id="time">
+ 
+  <button type="submit">Book NOW</button>
+  <p style="color: var(--color-glow);" id="Message"></p>
+</form>
+</main>
+<footer>
+  <p>Author: IT TEAM<br>
+  <a href="mailto:IT@example.com">IT@example.com</a></p>
+</footer>
+<script>
+   
+	if(localStorage.getItem("userEmail")){
+		 document.getElementById("email").value = localStorage.getItem("userEmail");
+	}
+	if(localStorage.getItem("userNumber")){
+		 document.getElementById("phone").value = localStorage.getItem("userNumber");
+	}
+	if(localStorage.getItem("userName")){
+		 document.getElementById("name").value = localStorage.getItem("userName");
+	}
+  let form = document.getElementById("testDriveForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+	if(name == ""){
+		document.getElementById("Message").innerText = "Name can not be empty";
+		return ;
+	}
+	for(let i=0;i<name.length;i++){
+	let char = name[i];
+	if(!(char>='a'&& char<='z')&&!(char>='A'&& char<='Z')&&(char!=' ')){
+		document.getElementById("Message").innerText = "Name must consist of letters only";
+		return ;
+	}
+}	
+	
+	
+	 let email = document.getElementById("email").value;
+	 	if(email == ""){
+				document.getElementById("Message").innerText = "email can not be empty";
+				return ;
+		}else if(!email.includes("@")||!email.includes(".")){
+				document.getElementById("Message").innerText = "email invalid";
+				return ;
+		}
+	
+	
+	let phone = document.getElementById("phone").value;
+	if(phone == ""){document.getElementById("Message").innerText = "phone can not be empty";
+				return ;
+		}else if(!phone.startsWith("01")|| !(phone.length==11)){
+				document.getElementById("Message").innerText = "phone invalid must start with 01 and be 11 numbers";
+				return ;
+		}
+    let car = document.getElementById("car").value;
+    let date = document.getElementById("date").value;
+	if(!date.includes("2026")){
+		document.getElementById("Message").innerText = "please select a date in the year 2026";
+		return ;
+	}
+
+    let message = document.getElementById("Message");
+
+    message.innerText = "Done " + name + "! Your test drive for " + car + " is booked on " + date;
+			}
+  );
+</script>
+<script src="themeChange.js"></script>
+</body>
+</html>

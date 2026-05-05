@@ -1,0 +1,34 @@
+#testDriveForm {
+  width: 280px;
+  margin: 14px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#testDriveForm input,
+#testDriveForm select {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+h1 {
+  text-align: center;
+  color:var(--color);
+  font-size: 40px;
+}
+#testDriveForm button:hover {
+  background-color: var(--color);
+}
+#testDriveForm input:hover,
+#testDriveForm select:hover {
+  border: 3.5px solid var(--color);
+}
+#message {
+color: var(--color);
+}
+.book-container{
+ 
+  flex-grow: 1;
+}

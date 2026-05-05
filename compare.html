@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare</title>
+    <link rel="stylesheet" href="styel.css">
+    <link rel="stylesheet" href="compare.css">
+	<link id="theme-style" href="default-theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <style>
+	
+	</style>
+	<nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html">Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Book.html">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html" class="active">Compare</a></li>
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us.</a></li>
+				<li class="navl"><a href="contact-us.html">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+
+    <div class="container">
+        <header>
+            <h1>OUR <span>CAR SHOWROOM</span></h1>
+            <p>Compare your favorite cars performance</p>
+        </header>
+
+        <section class="selection-area">
+            <select id="car1Select">
+                <option value="">Select First Car</option>
+                <option value="bmw">BMW M4 Competition</option>
+                <option value="merc">Mercedes-AMG C63</option>
+                <option value="audi">Audi RS7</option>
+                <option value="Lamborghini">Lamborghini Huracán EVO</option>
+                <option value="Porsche">Porsche 911 Turbo S</option>
+                <option value="Nissan">Nissan GT-R</option>
+                <option value="Toyota">Toyota Supra</option>
+                <option value="Chevrolet">Chevrolet Corvette</option>
+            </select>
+
+            <div class="vs-badge">VS</div>
+
+            <select id="car2Select">
+                <option value="">Select Second Car</option>
+                <option value="bmw">BMW M4 Competition</option>
+                <option value="merc">Mercedes-AMG C63</option>
+                <option value="audi">Audi RS7</option>
+                <option value="Lamborghini">Lamborghini Huracán EVO</option>
+                <option value="Porsche">Porsche 911 Turbo S</option>
+                <option value="Nissan">Nissan GT-R</option>
+                <option value="Toyota">Toyota Supra</option>
+                <option value="Chevrolet">Chevrolet Corvette</option>
+                
+            </select>
+        </section>
+
+        <main class="comparison-grid" id="comparisonGrid">
+            <div class="placeholder-text">Choose two cars to start comparing</div>
+        </main>
+    </div>
+   
+		
+			<footer>
+			<p>Author: Hege Refsnes<br>
+			<a href="mailto:hege@example.com">hege@example.com</a></p>
+		  </footer>
+    <script src="compare.js"></script>
+	<script src="themeChange.js"></script>
+</body>
+</html>

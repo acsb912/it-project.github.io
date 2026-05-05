@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Car Gallery</title>
+  <link id="theme-style" href="default-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="AG.css" rel="stylesheet">
+  		<style>
+
+		</style>
+  </head>
+	<body>
+	    <nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html" class="active">Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Book.html">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html">Compare</a></li>
+	
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us.</a></li>
+				<li class="navl"><a href="contact-us.html">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+		<main class="login">
+			<section>
+				<h1 class="title">signup</h1>
+			</section>
+			<section>
+			<form class="login-form">
+			<div class="row">
+			<label>Name</label>
+			<input type="text" placeholder="Abdelrahman" id="user-name">
+			</div>
+			<div class="row">
+			<label>phone number</label>
+			<input type="tel" placeholder="01*******" id="user-number">
+			</div>
+			<div class="row">
+			<label class="em">Email</label>
+			<input type="email" placeholder="something@gmail.com" id="user-email">
+			</div>
+			<div class="row">
+			<label>Password</label>
+			<input type="password" placeholder="password" id="user-password">
+			</div>
+			<div class="row">
+			<label>Confirm Password</label>
+			<input type="password" placeholder="password" id="user-c-password">
+			</div>
+			
+				<button type="button" class="button-link" id="sign_up">signup</button>
+			</form>
+			</section> 
+			<section>
+			<span id="cpassError">Make sure password is the same</span>
+			<span id="nameempError">name must not be empty</span>
+			<span id="emailempError">email must not be empty</span>
+			<span id="passempError">password must not be empty</span>
+			<span id="numberempError">number must not be empty</span>
+			<span id="nameError">name must only contain letters</span>
+			<span id="numberError">number must start with 01 and not less than 11</span>
+			<span id="emailError">enter a valid email</span>
+			<span id="passError">password must be at least 8 characters</span>
+			<span id="success">account created,
+			<a href="log-in.html">login now!</a>
+			</span>
+			</section>
+		  </main>
+		  <footer>
+			<p>Author: IT TEAM<br>
+			<a href="mailto:IT@example.com">IT@example.com</a></p>
+		  </footer>
+			<script src="AGsignup.js"></script>
+			<script src="themeChange.js"></script>
+		</body>
+	</html>

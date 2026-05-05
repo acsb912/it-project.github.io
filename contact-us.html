@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact us</title>
+	<link id="theme-style" href="default-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact-us.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html" >Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Book.html">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html">Compare</a></li>
+	
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us</a></li>
+				<li class="navl"><a href="contact-us.html" class="active">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+<main>
+<div class="contact-container">
+    <h1>Contact Our Garage</h1>
+    <p>Have a question about cars? Send us a message!</p>
+
+    <form class="contact-form"  id="send" novalidate>
+        <input type="text" placeholder="Your Name" id="name">
+
+        <input type="email" placeholder="Your Email" id="email" novalidate>
+
+        <select>
+            <option value="">Select Service</option>
+            <option>Buy a Car</option>
+            <option>Car Maintenance</option>
+            <option>Car Rental</option>
+        </select>
+
+        <textarea placeholder="Your Message" rows="5" id="message"></textarea>
+
+        <button type="submit">Send Request</button>
+		<p id="error-msg"></p>
+    </form>
+</div>
+
+<div class="contact-table">
+    <h2>Our Team Contact Info</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>E-mail</th>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Abdelrahman Osama</td>
+            <td><i class="fa-solid fa-phone"></i>01275520356</td>
+            <td><i class="fa-solid fa-envelope"></i>abdelrahmangebily@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Abdelrahman Gamal</td>
+            <td><i class="fa-solid fa-phone"></i>01102495055</td>
+            <td><i class="fa-solid fa-envelope"></i>abdelrahmangamal@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Kerolos Adel</td>
+            <td><i class="fa-solid fa-phone"></i>01288280657</td>
+            <td><i class="fa-solid fa-envelope"></i>keroadel@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Abdelrahman Hassan</td>
+            <td><i class="fa-solid fa-phone"></i>01012707959</td>
+            <td><i class="fa-solid fa-envelope"></i>bodyhassan@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Ahmed Sameh</td>
+            <td><i class="fa-solid fa-phone"></i>01080975067</td>
+            <td><i class="fa-solid fa-envelope"></i>ahmedsameh@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Ahmed Marzouk</td>
+            <td><i class="fa-solid fa-phone"></i>01007516998</td>
+            <td><i class="fa-solid fa-envelope"></i>ahmedmarzouk@gmail.com</td>
+        </tr>
+
+        <tr>
+            <td><i class="fa-solid fa-user"></i> Adham Elgendy</td>
+            <td><i class="fa-solid fa-phone"></i>01283581464</td>
+            <td><i class="fa-solid fa-envelope"></i>adhamgendy@gmail.com</td>
+        </tr>
+    </table>
+</div>
+<div class="map">
+<h2>OUR LOCATION</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27637.043910447668!2d31.178751999999996!3d30.018764799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1777940788040!5m2!1sen!2seg" 
+	width="600" 
+	height="450" 
+	style="border:0;" 
+	allowfullscreen="" 
+	loading="lazy" 
+	referrerpolicy=
+	"no-referrer-when-downgrade">
+	</iframe>
+
+</div>
+</main>
+<footer>
+			<p>Author: IT TEAM<br>
+			<a href="mailto:IT@example.com">IT@example.com</a></p>
+		  </footer>
+		  <script src="themeChange.js"></script>
+		  <script>
+		  if(localStorage.getItem("userName")){
+		 document.getElementById("name").value = localStorage.getItem("userName");
+	}
+	if(localStorage.getItem("userEmail")){
+		 document.getElementById("email").value = localStorage.getItem("userEmail");
+	}
+	let form = document.getElementById("send");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+	if(name == ""){
+		document.getElementById("error-msg").innerText = "Name can not be empty";
+		return ;
+	}	for(let i=0;i<name.length;i++){
+	let char = name[i];
+	if(!(char>='a'&& char<='z')&&!(char>='A'&& char<='Z')&&(char!=' ')){
+		document.getElementById("error-msg").innerText = "Name must consist of letters only";
+		return ;
+	}
+}	
+	
+	
+	 let email = document.getElementById("email").value;
+	 	if(email == ""){
+				document.getElementById("error-msg").innerText = "email can not be empty";
+				return ;
+		}else if(!email.includes("@")||!email.includes(".")){
+				document.getElementById("error-msg").innerText = "email invalid";
+				return ;
+		}
+		let msg = document.getElementById("message").value;
+		if(msg == ""){
+				document.getElementById("error-msg").innerText = "Message can not be empty";
+				return ;
+		}
+		let message = document.getElementById("error-msg");
+
+    message.innerText = "Done message sent ";
+			});
+		  </script>
+</body>
+</html>

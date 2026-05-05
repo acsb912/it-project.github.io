@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset ="UTF-8">
+  <title>Car Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="theme-style" href="default-theme.css" rel="stylesheet">
+  <link href="AG.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  		<style>
+		</style>
+  </head>
+	<body>
+	    <nav class ="navbar">
+			<ul class="left"> 
+				<li class="navl"><button id="themeChange">Switch theme</button></li>
+				<li class="navl"><a href="log-in.html" class="active">Login / Sign Up</a></li>
+			</ul>
+			<div>
+			<ul class="navM">
+				<li class="navl" id="H"><a href="index.html">Home</a></li>
+				<li class="navl"><a href="Car-Showroom/Browse.html">Car Showroom/Browse</a></li>
+				<li class="navl"><a href="Book.html">Book a Test Drive</a></li>
+				<li class="navl"><a href="compare.html">Compare</a></li>
+			</ul>
+			</div>
+			<ul class="right">
+				<li class="navl"><a href="about-us.html">about us.</a></li>
+				<li class="navl"><a href="contact-us.html">contact us</a></li>
+				<li class="navl" id="buy"><a href="Buy.html"><i class="fa-solid fa-cart-shopping"></i> Buy/Order a Car</a></li>
+			</ul>
+		</nav>
+		<main class="login">
+			<section>
+				<h1 class="title">login</h1>
+			</section>
+			<section>
+			<form class="login-form">
+			<div class="row">
+			<label class="em">Email</label>
+			<input type="email" placeholder="something@gmail.com" id="user-email">
+			</div>
+			<div class="row">
+			<label>Password</label>
+			<input type="password" placeholder="password" id="user-password">
+			</div>
+				<button type="button" class="button-link" id="log-inB">login</button>
+			</form>
+			</section>
+			<section>
+			<a href="sign-up.html" class="up-link" id="log-in">No account? signup now!</a>
+			</section>
+			<section>
+			<span id="email-emp">email cannot be empty</span>
+			<span id="pass-emp">password cannot be empty</span>
+			<span id="notfound">email or password incorrect</span>
+			<span id="gotohome">login succesful<a href="index.html">press here to Home</a></span>
+			</section>
+		</main>
+		<footer>
+			<p>Author: IT TEAM<br>
+			<a href="mailto:IT@example.com">IT@example.com</a></p>
+		  </footer>
+		<script src="AGlogin.js"></script>
+		<script src="themeChange.js"></script>
+	</body>
+	</html>
+  

@@ -1,0 +1,72 @@
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+	flex-grow: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 span {
+    color: var(--color);
+    font-weight: 300;
+}
+
+.selection-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+select {
+    background: var(--card-bg);
+    color: white;
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    width: 250px;
+}
+
+.vs-badge {
+    background: var(--color-glow);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--color-glow);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #24282c;
+}
+
+.spec-label { color: var(--text-dim); font-size: 0.9rem; }
+.spec-value { color: var(--color); font-weight: bold; }
+
+.placeholder-text {
+    grid-column: span 2;
+    text-align: center;
+    color: var(--text-dim);
+    margin-top: 50px;
+}

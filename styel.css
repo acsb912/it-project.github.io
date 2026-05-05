@@ -1,0 +1,22 @@
+@media (max-width: 600px) {
+    .selection-area {
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+    select {
+        width: 90%; 
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .vs-badge {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
